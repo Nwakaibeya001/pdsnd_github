@@ -6,16 +6,17 @@
 * `README` file created ***8 July 2023***
 
 ### Project Title
-Explore US Bikeshare Data
+Explore _US Bikeshare Data_
 
 ### Description
-The project explores data related to bike share systems for three major cities in the United States - Chicago, New York City, and Washington. The python code imports data from .csv data files and answers questions by computing descriptive statistics while creating an interactive experience in the terminal to present these statistics.
+The project explores data related to bike share systems for three major cities in the United States - ***Chicago***, ***New York City***, and ***Washington***. The `python code` imports data from `.csv` data files and answers questions by **computing descriptive statistics** while creating an interactive experience in the terminal to present these statistics.
 
 ### Files used
-* ._chicago.csv
-* ._new_york_city
-* ._washington
+* `._chicago.csv`
+* `._new_york_city`
+* `._washington`
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+* The repository was forked from [Udacity's GitHub Project repository](https://github.com/udacity/pdsnd_github).
+* [Markdown Guide from GitHub](https://guides.github.com/features/mastering-markdown/)
 
