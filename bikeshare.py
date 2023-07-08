@@ -2,9 +2,11 @@ import time
 import pandas as pd
 import numpy as np
 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 
 def get_filters():
     """
@@ -17,6 +19,8 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     
+
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = str(input("Would you like to review data for Chicago, New York City, or Washington?\n")).lower()
     while city not in CITY_DATA:
@@ -24,11 +28,15 @@ def get_filters():
         city = str(input("Please enter one of the options to review data:\nChicago \nNew York City \nWashington?\n")).lower()
     print("\nYou have selected to review data for {}!".format(city.title()))
 
+
+
     # TO DO: get user input for month (all, january, february, ... , june)
     month = str(input("Please enter which month's data to review - January, February, March, April, May, June, or All?\n")).title()
     while month not in ('January', 'February', 'March', 'April', 'May', 'June', 'All'):
         print("\nOops! It seems your entry is invalid. Please try again.")
         month = str(input("\nPlease enter which month's data to review - January, February, March, April, May, June, or All?\n")).title()
+
+
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = str(input("\nGreat! Now please enter which days' data in {} you want to review - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, or All?\n".format(month.title()))).title()
@@ -42,6 +50,7 @@ def get_filters():
     return city, month, day
 
 
+
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -53,6 +62,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
@@ -197,11 +207,13 @@ def raw_data(city):
         while user_input not in answers:
             user_input = str(input("\nWould you like to view the raw data records?\nPlease type 'YES' or 'NO'.\n\n")).upper()
 
+
         #displaying batch of 5 raw data records if user types 'YES' using the df.head() method
         if user_input == 'NO':
             break
         elif user_input == 'YES':
             print(df.head())
+
 
             #to confirm whether or not the user wants additional data to be displayed 
             while True:
@@ -211,6 +223,7 @@ def raw_data(city):
                 elif user_input == 'YES':
                     i += 5
                     print(df[i:i+5])
+
 
     print('-'*40)
 
